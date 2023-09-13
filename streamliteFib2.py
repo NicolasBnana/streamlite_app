@@ -5,7 +5,7 @@ import time
 import plotly.graph_objects as go
 import requests
 import pandas as pd
-from scipy.interpolate import griddata
+
 import json
 from datetime import datetime
 global_headers = {'Content-type': 'application/x-www-form-urlencoded',
@@ -75,7 +75,7 @@ if True:
 
     X, Y = np.meshgrid(xi, yi)
 
-    Z = griddata((x, y), z, (X, Y), method='nearest')
+
     xii=[]
     tss=np.array(rdata2r["Ts"])
     sizee=[]
